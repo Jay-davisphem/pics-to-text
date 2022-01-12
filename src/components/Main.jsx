@@ -1,33 +1,33 @@
-import { useState } from "react";
-import axios from "axios";
-import FormData from "form-data";
-import { nanoid } from "nanoid";
-
+import { useState } from 'react'
+import axios from 'axios'
+import FormData from 'form-data'
+import { nanoid } from 'nanoid'
+import React from 'react'
 function Main() {
-  const [images, setImages] = useState([]);
-  const [imgUrls, setImgsUrl] = useState([]);
-  const [text, setText] = useState({ error: "", loading: true, data: {} });
+  const [images, setImages] = useState([])
+  const [imgUrls, setImgsUrl] = useState([])
+  const [text, setText] = useState({ error: '', loading: true, data: {} })
 
   const handleSelect = (e) => {
-    const tmpImages = e.target.files;
-    setImages(tmpImages);
-    setText(text);
-    let val = [];
-    let i = 0;
+    const tmpImages = e.target.files
+    setImages(tmpImages)
+    setText(text)
+    let val = []
+    let i = 0
     for (let src of tmpImages) {
-      val.push([i, URL.createObjectURL(src)]);
-      i++;
+      val.push([i, URL.createObjectURL(src)])
+      i++
     }
-    setImgsUrl(val);
+    setImgsUrl(val)
     //console.log("jjdg", images, images[0].name, import.meta.VITE_APP_API_URL);
-  };
+  }
   const onSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     for (let file of images) {
-      const formData = new FormData();
-      formData.append("image name", file.name);
-      formData.append("image", file);
-      console.log(file, formData);
+      const formData = new FormData()
+      formData.append('image name', file.name)
+      formData.append('image', file)
+      console.log(file, formData)
 
       // const init = {
       //   method: "POST", // *GET, POST, PUT, DELETE, etc.
@@ -47,31 +47,29 @@ function Main() {
 
       const config = {
         // method: "POST", // *GET, POST, PUT, DELETE, etc.
-      };
+      }
       axios.defaults.headers.common = {
-        "X-API-Key": import.meta.env.VITE_APP_API_KEY,
-      };
+        'X-API-Key': import.meta.env.VITE_APP_API_KEY,
+      }
       axios
         .post(import.meta.env.VITE_APP_API_URL, formData, config)
         .then((res) => {
           const data = {
             url: URL.createObjectURL(file),
             data: res.data,
-          };
-          setText({ error: "", loading: false, data });
-          console.log(data.data);
+          }
+          setText({ error: '', loading: false, data })
+          console.log(data.data)
         })
         .catch((err) => {
-          const msg = err.message;
-          console.log({ error: msg, loading: false, data: {} });
-        });
+          const msg = err.message
+          console.log({ error: msg, loading: false, data: {} })
+        })
     }
-  };
+  }
   const initTemplate =
     imgUrls &&
-    imgUrls.map(([key, image]) => (
-      <img className="img" key={key} src={image} />
-    ));
+    imgUrls.map(([key, image]) => <img className="img" key={key} src={image} />)
   const finalTemplate = text.data.data && (
     <div>
       {text.data &&
@@ -82,7 +80,7 @@ function Main() {
         ))}
       ;
     </div>
-  );
+  )
 
   return (
     <main id="container">
@@ -105,7 +103,7 @@ function Main() {
       </form>
       {text.loading ? initTemplate : finalTemplate}
     </main>
-  );
+  )
 }
 
-export default Main;
+export default Main
