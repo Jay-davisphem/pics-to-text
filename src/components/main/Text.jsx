@@ -4,7 +4,7 @@ import Spin from "./Spin";
 
 const Text = ({ data, isLoading }) => {
   return (
-    <>
+    <div className="text-c">
       {data ? (
         <FinalTextplace data={data} />
       ) : isLoading ? (
@@ -12,7 +12,7 @@ const Text = ({ data, isLoading }) => {
       ) : (
         <InitTextplace />
       )}
-    </>
+    </div>
   );
 };
 

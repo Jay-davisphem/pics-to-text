@@ -1,7 +1,7 @@
 const Spin = () => {
   return (
     <>
-      <h1>SPIN</h1>
+      <h2>SPIN</h2>
     </>
   );
 };

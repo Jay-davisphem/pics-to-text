@@ -1,19 +1,24 @@
 function Form() {
   return (
-    <div class="wrapper">
-      <form class="form">
-        <div class="pageTitle title">SAY HI / SEND QUOTE</div>
-        <input type="text" id="name" name="name" class="name formEntry" />
+    <div className="wrapper">
+      <form className="form">
+        <div className="pageTitle title">SAY HI / SEND QUOTE</div>
+        <input type="text" id="name" name="name" className="name formEntry" />
 
-        <input type="email" id="email" class="email formEntry" name="email" />
+        <input
+          type="email"
+          id="email"
+          className="email formEntry"
+          name="email"
+        />
 
         <textarea
           id="message"
           name="message"
-          class="message formEntry"
+          className="message formEntry"
         ></textarea>
 
-        <input type="submit" value="HALLA ME" class="submit formEntry" />
+        <input type="submit" value="HALLA ME" className="submit formEntry" />
       </form>
     </div>
   );
