@@ -79,7 +79,7 @@ html {
     }
     main {
       background: $sec-col;
-      height: 60vh;
+      height: 50vh;
       //margin-bottom: 10%;
       form {
         position: absolute;
@@ -87,14 +87,14 @@ html {
       }
       button {
         position: relative;
-        bottom: -220px;
+        bottom: -175px;
         right: 45%;
       }
     }
     .wrapper {
       background-color: $sec-col;
-      width: 95%;
-      margin-left: 2.5%;
+      width: 90%;
+      margin-left: 5%;
       //margin-bottom: 35%;
       border-radius: 8px;
       form {
@@ -108,29 +108,29 @@ html {
           border: none;
           border-bottom: 1px solid $pri-col;
           margin: {
-            bottom: 20px;
+            bottom: 5px;
           }
           font-size: 1em;
           color: $pri-col;
         }
         .name,
         .email {
-          min-height: 45px;
+          min-height: 10px;
         }
         .message {
-          min-height: 70px;
+          min-height: 20px;
         }
         .submit {
-          min-height: 35px;
+          min-height: 15px;
           width: 50%;
           border: none;
           background-color: $pri-col;
           color: $sec-col;
           font-size: 1.5em;
-          padding-top: 13px;
+          padding-top: 10px;
           margin: {
-            top: 25px;
-            bottom: 30px;
+            top: 10px;
+            bottom: 15px;
           }
         }
         .title {
@@ -168,8 +168,8 @@ a > .contact-btn {
 a > .contact-btn {
   align-self: flex-end;
 }
-@include cont("img", 0, 90%, 27vh);
-@include cont("text", 0, 90%, 27vh);
+@include cont("img", 0, 90%, 22vh);
+@include cont("text", 0, 90%, 22vh);
 .img-c img {
   width: 100%;
   height: 100%;
@@ -208,12 +208,12 @@ a > .contact-btn {
     padding-left: 25%;
     form {
       position: relative;
-      right: 600px !important;
-      font-size: 2em;
+      right: 400px !important;
+      font-size: 1em;
     }
     button {
-      bottom: -180px !important;
-      right: 50% !important;
+      bottom: -100px !important;
+      right: 75% !important;
       font-size: 0.5em;
     }
   }
@@ -223,11 +223,11 @@ a > .contact-btn {
   }
 
   footer {
-    margin-top: 2% !important;
+    margin-top: 1% !important;
   }
 
-  @include cont("img", 0, 50%, 27vh);
-  @include cont("text", 0, 50%, 27vh);
+  @include cont("img", 0, 50%, 22vh);
+  @include cont("text", 0, 50%, 22vh);
   .big-X {
     font-size: 4em !important;
     text-shadow: 8px 0 8px $pri-col, -8px 0 8px $pri-col, 0 -8px 8px $pri-col,
@@ -250,8 +250,8 @@ a > .contact-btn {
     display: block;
     position: absolute;
     background-color: red;
-    width: 70px;
-    height: 100px;
-    right: 80%;
+    width: 40px;
+    height: 50px;
+    right: 20%;
   }
 }
