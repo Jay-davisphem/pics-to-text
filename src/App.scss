@@ -19,7 +19,7 @@ html {
   background: $backg-color no-repeat;
   background-size: cover;
   max-height: 100%;
-  height: 100%;
+  height: 200%;
   overflow: hidden;
   input {
     font-size: 0.7em;
@@ -120,12 +120,12 @@ html {
           min-height: 20px;
         }
         .submit {
-          min-height: 15px;
+          min-height: 12px;
           width: 50%;
           border: none;
           background-color: $pri-col;
           color: $sec-col;
-          font-size: 1.5em;
+          font-size: 1em;
           padding-top: 10px;
           margin: {
             top: 10px;
