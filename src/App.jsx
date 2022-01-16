@@ -7,6 +7,7 @@ import Contact from "./pages/contact";
 function App() {
   return (
     <div className="App">
+      <div className="red-box"></div>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
