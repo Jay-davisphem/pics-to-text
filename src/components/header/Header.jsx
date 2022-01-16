@@ -5,11 +5,13 @@ import TextHead from "./TextHead";
 
 function Header({ text = "CONTACT ME", path = "/contact-me" }) {
   return (
-    <header>
-      <Logo />
-      <ContactButton path={path} text={text} />
+    <>
+      <header>
+        <Logo />
+        <ContactButton path={path} text={text} />
+      </header>
       <TextHead />
-    </header>
+    </>
   );
 }
 

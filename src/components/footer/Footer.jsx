@@ -9,7 +9,7 @@ function Footer() {
         be used as you want
       </p>
       <p>
-        &#169;<a href="#">daviSPhem</a>
+        &#169;<a href="#">daviSPhem 2022</a>
       </p>
     </footer>
   );

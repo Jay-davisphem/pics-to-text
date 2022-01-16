@@ -63,18 +63,6 @@ function Main() {
       <ImageForm onSubmit={onSubmit} handleSelect={handleSelect} />
       <Image image={image} isSet={isSet} />
       <Text data={data} isLoading={isLoading} />
-
-      {/*<div>
-        Checkknkndndjnjndnnjnjdddnjdbbhdddbhdhdhdbh
-        <Canva
-          onSubmit={onSubmit}
-          handleSelect={handleSelect}
-          image={image}
-          isSet={isSet}
-          data={data}
-          isLoading={isLoading}
-        />
-      </div>*/}
     </main>
   );
 }

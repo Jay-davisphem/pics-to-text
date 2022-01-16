@@ -1,64 +1,97 @@
-$backg-color: linear-gradient(
-  287.63deg,
-  rgba(39, 86, 52, 0.953125) 64.51%,
-  rgba(78, 114, 88, 0.713542) 77.03%,
-  #1f512d 77.87%,
-  rgba(112, 137, 119, 0.510417) 87.65%,
-  rgba(146, 161, 150, 0.302083) 91.77%,
-  rgba(174, 180, 176, 0.135417) 107.26%,
-  rgba(196, 196, 196, 0) 113.44%
-);
-$pri-col: #1f512d;
-$sec-col: white;
-$img-col: linear-gradient(
-  180deg,
-  #c4c4c4 0%,
-  rgba(196, 196, 196, 0.937493) 40%,
-  rgba(196, 196, 196, 0.90624) 70%,
-  rgba(196, 196, 196, 0.864569) 100%
-);
-$i-X-col: red;
-
+@use "lib" as *;
 html {
-  background: $backg-color;
+  background: $backg-color no-repeat;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
   body {
     font-size: 20px;
     header {
+      height: 15vh;
       display: flex;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
       .logo {
         text-align: center;
+        align-self: flex-start;
         .big-X {
           color: red;
-          font-size: 3rem;
+          font-weight: 900;
+          font-size: 3em;
           text-shadow: 5px 0 5px $pri-col, -5px 0 5px $pri-col,
             0 -5px 5px $pri-col, 0 5px 5px $pri-col;
         }
         .small-img {
           color: $pri-col;
-          font-size: 1em;
+          font-size: 1.5em;
+          font-width: 900;
         }
       }
       .contact-btn {
         border: none;
-        border-radius: 12px;
+        height: 40px;
+        border-radius: 8px;
         padding: 15px, 32px;
         text-align: center;
-        display: inline-block;
         width: 120px;
         span {
-          vertical-align: middle;
+          vertical-align: -2vh;
           display: inline-block;
           font-size: 1.5em;
+          -webkit-transform: scale(1, 2);
+          transform: scale(1, 2);
           text-align: center;
           font-weight: 900;
           font-style: italic;
         }
       }
     }
+    h1 {
+      color: $sec-col;
+      font-size: 1.4em;
+    }
+    main {
+      background: $sec-col;
+      height: 60vh;
+      .img-c {
+        margin-left: 5%;
+        width: 90%;
+        height: 30vh;
+        background: $img-col;
+      }
+      form {
+        position: absolute;
+        right: 0;
+      }
+      button {
+        position: relative;
+        bottom: -260px;
+        right: 80%;
+      }
+    }
+    footer {
+      position: absolute;
+      bottom: 0;
+      border-top: 0.1px solid $sec-col;
+      p {
+        font-size: 0.8em;
+        color: $sec-col;
+        margin-bottom: 0.5em;
+      }
+      .own {
+        margin-top: 0.5em;
+        color: red;
+      }
+    }
   }
 }
-
+.logo,
+a > .contact-btn {
+  margin: 4vw;
+}
+a > .contact-btn {
+  align-self: flex-end;
+}
 .App {
   text-align: center;
 }

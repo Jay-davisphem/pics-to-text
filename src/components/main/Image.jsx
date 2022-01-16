@@ -1,4 +1,8 @@
 const Image = ({ image, isSet }) => {
-  return <>{isSet ? <img src={URL.createObjectURL(image)} /> : <>{""}</>}</>;
+  return (
+    <div className="img-c">
+      {isSet ? <img src={URL.createObjectURL(image)} /> : <>{""}</>}
+    </div>
+  );
 };
 export default Image;
