@@ -15,6 +15,14 @@
     background: $img-col;
   }
 }
+header {
+  h1 {
+    margin: {
+      top: 0;
+      bottom: 20px !important;
+    }
+  }
+}
 html {
   background: $backg-color no-repeat;
   background-size: cover;
@@ -195,7 +203,7 @@ a > .contact-btn {
 }
 .formEntry::placeholder {
   font-size: 15px;
-  color: $pri-col;
+  color: #90917e;
 }
 .App {
   text-align: center;
