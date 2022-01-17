@@ -131,6 +131,12 @@ html {
             top: 10px;
             bottom: 15px;
           }
+          &:hover,
+          &:active {
+            border: 2px solid $pri-col;
+            background-color: $sec-col;
+            color: $pri-col;
+          }
         }
         .title {
           font-size: 1.5em;
@@ -243,7 +249,7 @@ a > .contact-btn {
     font-size: 0.7em;
   }
   h1 {
-    font-size: 3em !important;
+    font-size: 2em !important;
   }
   .red-box {
     display: block;
