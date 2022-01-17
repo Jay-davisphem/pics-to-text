@@ -8,7 +8,7 @@ const Text = ({ data, isLoading }) => {
       {data ? (
         <FinalTextplace data={data} />
       ) : isLoading ? (
-        <Spin />
+        <Spin isLoading={isLoading} />
       ) : (
         <InitTextplace />
       )}

@@ -1,8 +1,10 @@
-const Spin = () => {
+import { BounceLoader } from "react-spinners";
+const cssL = { "margin-top": "20px" };
+const Spin = ({ isLoading }) => {
   return (
-    <>
-      <h2>SPIN</h2>
-    </>
+    <div className="spin">
+      <BounceLoader size={50} loading={isLoading} />
+    </div>
   );
 };
 

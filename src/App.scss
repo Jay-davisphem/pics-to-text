@@ -15,6 +15,10 @@
     background: $img-col;
   }
 }
+.spin {
+  padding-top: 25%;
+  padding-right: 13%;
+}
 header {
   h1 {
     margin: {
@@ -33,7 +37,7 @@ html {
     font-size: 0.7em;
   }
   body {
-    font-size: 20px;
+    font-size: 15px;
     header {
       height: 15vh;
       display: flex;
@@ -94,8 +98,8 @@ html {
       }
       button {
         position: relative;
-        bottom: -175px;
-        right: 45%;
+        bottom: -160px;
+        right: 50%;
       }
     }
     .wrapper {
@@ -222,7 +226,7 @@ a > .contact-btn {
     form {
       position: relative;
       right: 400px !important;
-      font-size: 1em;
+      font-size: 1.4em;
     }
     button {
       bottom: -100px !important;
@@ -266,5 +270,9 @@ a > .contact-btn {
     width: 40px;
     height: 50px;
     right: 20%;
+  }
+  .spin {
+    padding-top: 13%;
+    padding-right: 13%;
   }
 }
